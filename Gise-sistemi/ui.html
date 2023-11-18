@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ui.css">
+    <title>GUI</title>
+</head>
+
+<body>
+
+    <div class="data-block">
+        <h2>Veri Okuma</h2>
+        <input type="text" id="id" placeholder="Id">
+        <input type="text" id="name" placeholder="Ad">
+        <input type="text" id="surname" placeholder="Soyad">
+        <button id="read_button">Veriler Oku</button>
+
+        <div id="display-data">Okunan Veri Burada Gösterilecek</div>
+    </div>
+
+    <div class="data-block">
+        <h2>Veri Ekleme</h2>
+        <input type="text" id="new_name" placeholder="Ad">
+        <input type="text" id="new_surname" placeholder="Soyad">
+        <input type="text" id="new_date" placeholder="Doğum Tarihi(YYYY-AA-GG)">
+        <input type="text" id="new_gender" placeholder="Cinsiyet">
+        <button id="add_button">Veri Ekle</button>
+    </div>
+
+    <div class="data-block">
+        <h2>Veri Güncelleme</h2>
+        <input type="text" id="update_data" placeholder="Çalışan Id'si">
+        <input type="text" id="update_name" placeholder="Ad">
+        <input type="text" id="update_surname" placeholder="Soyad">
+        <input type="text" id="update_date" placeholder="Doğum Tarihi(YYYY-AA-GG)">
+        <input type="text" id="update_gender" placeholder="Cinsiyet">
+        <button id="update_button">Veriyi Güncelle</button>
+    </div>
+
+    <div class="data-block">
+        <h2>Parmak İzi Ekleme</h2>
+        <button id="add-fingerprint">Parmak İzi Ekle</button>
+    </div>
+
+    <div class="data-block">
+        <h2>Giriş Sorgulama</h2>
+        <input type="text" id="entry_query_id" placeholder="Id bilgisini giriniz.">
+        <button id="entry_query">Sorgula</button>
+    </div>
+
+    <div class="data-block">
+        <h2>Çıkış Sorgulama</h2>
+        <input type="text" id="exit_query_id" placeholder="Id bilgisini giriniz.">
+        <button id="exit_query">Sorgula</button>
+    </div>
+
+    <script>
+        
+        var readButton = document.getElementById("read_button");
+        readButton.addEventListener("click", function () {
+            var id = document.getElementById('id').value;
+            var name = document.getElementById('name').value;
+            var surname = document.getElementById('surname').value;
+            // Veriyi okuma işlemleri burada gerçekleştirilir
+            var data = "Örnek veri"; // Okunan veriyi al
+            document.getElementById("display-data").textContent = data;
+            console.log(id)
+            console.log(name)
+            console.log(surname)
+            if(if == null) //BURDA KALDIM ###########################################################################################
+        });
+
+        document.getElementById("add-data").addEventListener("click", function () {
+            var newData = document.getElementById("new-data").value;
+            // Yeni veriyi ekleme işlemleri burada gerçekleştirilir
+        });
+
+        document.getElementById("update-button").addEventListener("click", function () {
+            var dataToUpdate = document.getElementById("update-data").value;
+            var newValue = document.getElementById("new-value").value;
+            // Veri güncelleme işlemleri burada gerçekleştirilir
+        });
+
+        document.getElementById("add-fingerprint").addEventListener("click", function () {
+            // Parmak izi ekleme işlemleri burada gerçekleştirilir
+        });
+
+        document.getElementById("entry_query").addEventListener("click", function () {
+            var entry_query_id = document.getElementById("entry_query_id").value;
+            // Giriş sorgulama işlemleri burada gerçekleştirilir
+        });
+
+        document.getElementById("exit_query").addEventListener("click", function () {
+            var exit_query_id = document.getElementById("exit_query_id").value;
+            // Çıkış sorgulama işlemleri burada gerçekleştirilir
+        });
+
+    </script>
+    <script src="ui.js"></script>
+</body>
+
+</html>
